@@ -35,7 +35,7 @@ var app = {
     onDeviceReady: function() {
         var push = PushNotification.init({
             "android": {
-                "senderID": "739143097358"
+                "senderID": "77048648173"
             },
             "ios": {"alert": "true", "badge": "true", "sound": "true"}, 
             "windows": {} 
@@ -43,25 +43,12 @@ var app = {
         
         push.on('registration', function(data) {
             console.log("registration event");
-            document.getElementById("regId").innerHTML = data.registrationId;
+            document.getElementsByClassName("code").innerHTML = data.registrationId;
             console.log(JSON.stringify(data));
         });
 
         push.on('notification', function(data) {
         	console.log("notification event");
-            console.log(JSON.stringify(data));
-            var cards = document.getElementById("cards");
-            var card = '<div class="row">' +
-		  		  '<div class="col s12 m6">' +
-				  '  <div class="card darken-1">' +
-				  '    <div class="card-content black-text">' +
-				  '      <span class="card-title black-text">' + data.title + '</span>' +
-				  '      <p>' + data.message + '</p>' +
-				  '    </div>' +
-				  '  </div>' +
-				  ' </div>' +
-				  '</div>';
-            cards.innerHTML += card;
             
             push.finish(function () {
                 console.log('finish successfully called');
@@ -71,7 +58,25 @@ var app = {
         push.on('error', function(e) {
             console.log("push error");
         });
+
+        var checkPassword = function () {
+            if (window.localStorage.getItem('code') === '1') {
+                document.querySelector('.app').innerHTML =
+                    "<iframe src='http://www.fitness-addict.club/' style='width: 100%' height='100%' frameborder='0'></iframe>"
+            }
+        };
+
+        checkPassword();
+
+        var inputPassAndCheck = function () {
+            window.localStorage.setItem('code', document.getElementById('input').value);
+            checkPassword();
+        };
+
+        document.getElementById('button').addEventListener('click', inputPassAndCheck, true)
     }
 };
+
+
 
 app.initialize();
