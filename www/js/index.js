@@ -66,7 +66,7 @@ var app = {
             }
         };
 
-        checkPassword();
+        //checkPassword();
 
         var inputPassAndCheck = function () {
             window.localStorage.setItem('code', document.getElementById('input').value);
