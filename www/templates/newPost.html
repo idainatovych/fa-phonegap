@@ -1,0 +1,28 @@
+<ion-view title="New Post" id="newPost">
+    <ion-content padding="true" class="has-header">
+        <div class="list">
+            <label class="item item-input item-select">
+                <div class="input-label">
+                    Type
+                </div>
+                <select>
+                    <option>Post</option>
+                    <option selected>Question</option>
+                </select>
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Message</span>
+                <textarea rows="5" placeholder="Enter your message"></textarea>
+            </label>
+            <a class="item item-icon-left item-icon-right" ui-sref="tabsController.addContacts">
+                <i class="icon ion-person-stalker"></i>
+                Add clients
+                <span class="badge badge-assertive" style="margin-right: 10px">42</span>
+                <i class="icon ion-arrow-right-c"></i>
+            </a>
+            <a class="button button-balanced button-block" href="#">
+                Send
+            </a>
+        </div>
+    </ion-content>
+</ion-view>
