@@ -1,9 +1,5 @@
 angular.module('app.controllers', [])
-  
-.controller('streamCtrl', function($scope) {
 
-})
-   
 .controller('scheduleTrainerCtrl', function($scope, $ionicPopup) {
 
 // Triggered on a button click, or some other target
@@ -26,36 +22,4 @@ angular.module('app.controllers', [])
             });
         }
     }();
-})
-   
-.controller('accountCtrl', function($scope) {
-
-})
-      
-.controller('trainersCtrl', function($scope) {
-
-})
-   
-.controller('myAppointmentsCtrl', function($scope) {
-
-})
-   
-.controller('loginCtrl', function($scope) {
-
-})
-   
-.controller('signupCtrl', function($scope) {
-
-})
-   
-.controller('pageCtrl', function($scope) {
-
-})
-    
-.controller('newPostCtrl', function($scope) {
-
-})
-
-.controller('addContactsCtrl', function($scope) {
-
-})
+});
