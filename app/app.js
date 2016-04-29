@@ -10,7 +10,7 @@ angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.services',
             goodbye_message: "Пароль"
         });
         $translateProvider.preferredLanguage("en");
-        $translateProvider.fallbackLanguage("ru");
+        $translateProvider.fallbackLanguage("en");
     })
     .run(function ($ionicPlatform, $translate) {
 
