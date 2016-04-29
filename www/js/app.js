@@ -70802,5 +70802,95 @@ IonicModule
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('app', ['ionic']);
+(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+
+  angular.module('app', ['ionic'])
+
+      .config(require('./components/router'));
+
+},{"./components/router":2}],2:[function(require,module,exports){
+  module.exports = function ($stateProvider, $urlRouterProvider) {
+    $stateProvider
+        .state('tabsController.stream', {
+          url: '/stream',
+          views: {
+            'tab1': {
+              templateUrl: 'views/components/stream/streamView.html'
+            }
+          }
+        })
+
+        .state('tabsController.scheduleTrainer', {
+          url: '/slots/trainerName',
+          views: {
+            'tab4': {
+              templateUrl: 'views/components/scheduleTrainer/scheduleView.html'
+            }
+          }
+        })
+
+        .state('tabsController.account', {
+          url: '/account',
+          views: {
+            'tab3': {
+              templateUrl: 'views/components/account/accountView.html'
+            }
+          }
+        })
+
+        .state('tabsController', {
+          url: '/main',
+          templateUrl: 'views/shared/tabsController/tabsController.html',
+          abstract: true
+        })
+
+        .state('tabsController.trainers', {
+          url: '/services',
+          views: {
+            'tab4': {
+              templateUrl: 'templates/trainers.html'
+            }
+          }
+        })
+
+        .state('tabsController.myAppointments', {
+          url: '/my-events',
+          views: {
+            'tab2': {
+              templateUrl: 'views/components/myEvents/eventsView.html'
+            }
+          }
+        })
+
+        .state('login', {
+          url: '/login',
+          templateUrl: 'views/components/login/loginView.html'
+        })
+
+        .state('signup', {
+          url: '/signup',
+          templateUrl: 'views/components/login/signupView.html'
+        })
+
+        .state('tabsController.newPost', {
+          url: '/newPost',
+          views: {
+            'tab1': {
+              templateUrl: 'views/components/stream/newPostView.html'
+            }
+          }
+        })
+        .state('tabsController.addContacts', {
+          url: '/addContacts',
+          views: {
+            'tab1': {
+              templateUrl: 'views/components/stream/addContactsView.html'
+            }
+          }
+        });
+
+    $urlRouterProvider.otherwise('/login')
+  };
+
+},{}]},{},[1]);
 

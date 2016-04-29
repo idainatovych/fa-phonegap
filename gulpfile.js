@@ -7,6 +7,9 @@ var minifyCss = require('gulp-minify-css');
 var rename = require('gulp-rename');
 var uglify = require('gulp-uglify');
 var mainBowerFiles = require('main-bower-files');
+var browserify = require('browserify');
+var source = require('vinyl-source-stream');
+
 
 gulp.task('copy', function(done) {
     return gulp.src(['app/**/*.html', '!app/index.html'])
@@ -57,11 +60,11 @@ gulp.task('vendor_js', function(done) {
 });
 
 gulp.task('js', function(done) {
-    return gulp.src('app/app.js')
-        .pipe(concat('dist.js'))
+    var bundleStream = browserify('app/app.js').bundle()
+    bundleStream
+        .pipe(source('dist.js'))
         .pipe(gulp.dest('temp/js/'));
 });
-
 
 gulp.task('compile_dist', ['vendor_js', 'js'], function() {
     return gulp.src(['temp/js/vendor.js', 'temp/js/dist.js'])
