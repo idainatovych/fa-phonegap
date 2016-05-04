@@ -1,8 +1,7 @@
-angular.module('app.controllers', [])
+'use strict';
 
-.controller('scheduleTrainerCtrl', function($scope, $ionicPopup) {
+function scheduleTrainerCtrl($scope, $ionicPopup) {
 
-// Triggered on a button click, or some other target
     $scope.showPopup = function() {
         $scope.data = {};
 
@@ -22,4 +21,6 @@ angular.module('app.controllers', [])
             });
         }
     }();
-});
+}
+
+module.exports = ['$scope', '$ionicPopup', scheduleTrainerCtrl];

@@ -1,4 +1,11 @@
+'use strict';
 
-angular.module('app', ['ionic'])
+require('./components/schedule');
 
-.config(require('./components/router'));
+module.exports = angular.module('app', [
+        'ionic',
+        'schedule'
+    ])
+    .run(require('./app.main'))
+    .config(require('./app.router'))
+;

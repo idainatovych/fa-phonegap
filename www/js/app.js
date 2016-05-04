@@ -70795,102 +70795,167 @@ IonicModule
 });
 
 })();
-// Ionic Starter App
-
-// angular.module is a global place for creating, registering and retrieving Angular modules
-// 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
-// the 2nd parameter is an array of 'requires'
-// 'starter.services' is found in services.js
-// 'starter.controllers' is found in controllers.js
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+'use strict';
 
-  angular.module('app', ['ionic'])
+require('./components/schedule');
 
-      .config(require('./components/router'));
+module.exports = angular.module('app', [
+        'ionic',
+        'schedule'
+    ])
+    .run(require('./app.main'))
+    .config(require('./app.router'))
+;
+},{"./app.main":2,"./app.router":3,"./components/schedule":4}],2:[function(require,module,exports){
+'use strict';
 
-},{"./components/router":2}],2:[function(require,module,exports){
-  module.exports = function ($stateProvider, $urlRouterProvider) {
+function AppMain($ionicPlatform) {
+    $ionicPlatform.ready(function() {
+        // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
+        // for form inputs)
+        if (window.cordova && window.cordova.plugins && window.cordova.plugins.Keyboard) {
+            cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+        }
+        if (window.StatusBar) {
+            // org.apache.cordova.statusbar required
+            //StatusBar.styleLightContent();
+        }
+    });
+}
+
+module.exports = ['$ionicPlatform', AppMain];
+
+},{}],3:[function(require,module,exports){
+module.exports = function ($stateProvider, $urlRouterProvider) {
     $stateProvider
-        .state('tabsController.stream', {
-          url: '/stream',
-          views: {
-            'tab1': {
-              templateUrl: 'views/components/stream/streamView.html'
-            }
-          }
-        })
 
-        .state('tabsController.scheduleTrainer', {
-          url: '/slots/trainerName',
-          views: {
-            'tab4': {
-              templateUrl: 'views/components/scheduleTrainer/scheduleView.html'
-            }
-          }
-        })
-
-        .state('tabsController.account', {
-          url: '/account',
-          views: {
-            'tab3': {
-              templateUrl: 'views/components/account/accountView.html'
-            }
-          }
-        })
-
+        //abstracts
         .state('tabsController', {
-          url: '/main',
-          templateUrl: 'views/shared/tabsController/tabsController.html',
-          abstract: true
+            url: '/main',
+            templateUrl: 'views/shared/tabsController/tabsController.html',
+            abstract: true
         })
 
-        .state('tabsController.trainers', {
-          url: '/services',
-          views: {
-            'tab4': {
-              templateUrl: 'templates/trainers.html'
-            }
-          }
-        })
-
-        .state('tabsController.myAppointments', {
-          url: '/my-events',
-          views: {
-            'tab2': {
-              templateUrl: 'views/components/myEvents/eventsView.html'
-            }
-          }
-        })
+        //login
 
         .state('login', {
-          url: '/login',
-          templateUrl: 'views/components/login/loginView.html'
+            url: '/login',
+            templateUrl: 'views/components/login/loginView.html'
         })
 
         .state('signup', {
-          url: '/signup',
-          templateUrl: 'views/components/login/signupView.html'
+            url: '/signup',
+            templateUrl: 'views/components/login/signupView.html'
+        })
+
+        //services
+
+        .state('tabsController.scheduleTrainer', {
+            url: '/slots/trainerName',
+            views: {
+                'services': {
+                    templateUrl: 'views/components/scheduleTrainer/scheduleView.html',
+                    controller: 'scheduleCtrl'
+                }
+            }
+        })
+
+        .state('tabsController.services', {
+            url: '/services',
+            views: {
+                'services': {
+                    templateUrl: 'views/components/services/servicesView.html',
+                }
+            }
+        })
+
+        //stream
+
+        .state('tabsController.stream', {
+            url: '/stream',
+            views: {
+                'stream': {
+                    templateUrl: 'views/components/stream/streamView.html'
+                }
+            }
         })
 
         .state('tabsController.newPost', {
-          url: '/newPost',
-          views: {
-            'tab1': {
-              templateUrl: 'views/components/stream/newPostView.html'
+            url: '/newPost',
+            views: {
+                'stream': {
+                    templateUrl: 'views/components/stream/newPostView.html'
+                }
             }
-          }
         })
         .state('tabsController.addContacts', {
-          url: '/addContacts',
-          views: {
-            'tab1': {
-              templateUrl: 'views/components/stream/addContactsView.html'
+            url: '/addContacts',
+            views: {
+                'stream': {
+                    templateUrl: 'views/components/stream/addContactsView.html'
+                }
             }
-          }
+        })
+
+        //events
+
+        .state('tabsController.myEvents', {
+            url: '/my-events',
+            views: {
+                'events': {
+                    templateUrl: 'views/components/myEvents/eventsView.html'
+                }
+            }
+        })
+
+        //account
+
+        .state('tabsController.account', {
+            url: '/account',
+            views: {
+                'account': {
+                    templateUrl: 'views/components/account/accountView.html'
+                }
+            }
         });
 
+
     $urlRouterProvider.otherwise('/login')
-  };
+};
 
-},{}]},{},[1]);
+},{}],4:[function(require,module,exports){
+'use strict';
 
+module.exports = angular.module('schedule', [])
+    .controller('scheduleCtrl', require('./scheduleCtrl'))
+
+},{"./scheduleCtrl":5}],5:[function(require,module,exports){
+'use strict';
+
+function scheduleTrainerCtrl($scope, $ionicPopup) {
+
+    $scope.showPopup = function() {
+        $scope.data = {};
+
+        // A confirm dialog
+        $scope.showConfirm = function() {
+            var confirmPopup = $ionicPopup.confirm({
+                title: 'Confirm appointment',
+                template: '<p class="text-center">Create appointment with <strong>Artem Davidchenko</strong> on <strong>Monday, 25 Apr 2016 from 10:00 till 11:00</strong>?</p>'
+            });
+
+            confirmPopup.then(function(res) {
+                if(res) {
+                    console.log('You are sure');
+                } else {
+                    console.log('You are not sure');
+                }
+            });
+        }
+    }();
+}
+
+module.exports = ['$scope', '$ionicPopup', scheduleTrainerCtrl];
+},{}]},{},[1])
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm5vZGVfbW9kdWxlcy9icm93c2VyLXBhY2svX3ByZWx1ZGUuanMiLCJhcHAvYXBwLmpzIiwiYXBwL2FwcC5tYWluLmpzIiwiYXBwL2FwcC5yb3V0ZXIuanMiLCJhcHAvY29tcG9uZW50cy9zY2hlZHVsZS9pbmRleC5qcyIsImFwcC9jb21wb25lbnRzL3NjaGVkdWxlL3NjaGVkdWxlQ3RybC5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtBQ0FBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FDVkE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQ2pCQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUNoR0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUNKQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBIiwiZmlsZSI6ImdlbmVyYXRlZC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzQ29udGVudCI6WyIoZnVuY3Rpb24gZSh0LG4scil7ZnVuY3Rpb24gcyhvLHUpe2lmKCFuW29dKXtpZighdFtvXSl7dmFyIGE9dHlwZW9mIHJlcXVpcmU9PVwiZnVuY3Rpb25cIiYmcmVxdWlyZTtpZighdSYmYSlyZXR1cm4gYShvLCEwKTtpZihpKXJldHVybiBpKG8sITApO3ZhciBmPW5ldyBFcnJvcihcIkNhbm5vdCBmaW5kIG1vZHVsZSAnXCIrbytcIidcIik7dGhyb3cgZi5jb2RlPVwiTU9EVUxFX05PVF9GT1VORFwiLGZ9dmFyIGw9bltvXT17ZXhwb3J0czp7fX07dFtvXVswXS5jYWxsKGwuZXhwb3J0cyxmdW5jdGlvbihlKXt2YXIgbj10W29dWzFdW2VdO3JldHVybiBzKG4/bjplKX0sbCxsLmV4cG9ydHMsZSx0LG4scil9cmV0dXJuIG5bb10uZXhwb3J0c312YXIgaT10eXBlb2YgcmVxdWlyZT09XCJmdW5jdGlvblwiJiZyZXF1aXJlO2Zvcih2YXIgbz0wO288ci5sZW5ndGg7bysrKXMocltvXSk7cmV0dXJuIHN9KSIsIid1c2Ugc3RyaWN0JztcclxuXHJcbnJlcXVpcmUoJy4vY29tcG9uZW50cy9zY2hlZHVsZScpO1xyXG5cclxubW9kdWxlLmV4cG9ydHMgPSBhbmd1bGFyLm1vZHVsZSgnYXBwJywgW1xyXG4gICAgICAgICdpb25pYycsXHJcbiAgICAgICAgJ3NjaGVkdWxlJ1xyXG4gICAgXSlcclxuICAgIC5ydW4ocmVxdWlyZSgnLi9hcHAubWFpbicpKVxyXG4gICAgLmNvbmZpZyhyZXF1aXJlKCcuL2FwcC5yb3V0ZXInKSlcclxuOyIsIid1c2Ugc3RyaWN0JztcclxuXHJcbmZ1bmN0aW9uIEFwcE1haW4oJGlvbmljUGxhdGZvcm0pIHtcclxuICAgICRpb25pY1BsYXRmb3JtLnJlYWR5KGZ1bmN0aW9uKCkge1xyXG4gICAgICAgIC8vIEhpZGUgdGhlIGFjY2Vzc29yeSBiYXIgYnkgZGVmYXVsdCAocmVtb3ZlIHRoaXMgdG8gc2hvdyB0aGUgYWNjZXNzb3J5IGJhciBhYm92ZSB0aGUga2V5Ym9hcmRcclxuICAgICAgICAvLyBmb3IgZm9ybSBpbnB1dHMpXHJcbiAgICAgICAgaWYgKHdpbmRvdy5jb3Jkb3ZhICYmIHdpbmRvdy5jb3Jkb3ZhLnBsdWdpbnMgJiYgd2luZG93LmNvcmRvdmEucGx1Z2lucy5LZXlib2FyZCkge1xyXG4gICAgICAgICAgICBjb3Jkb3ZhLnBsdWdpbnMuS2V5Ym9hcmQuaGlkZUtleWJvYXJkQWNjZXNzb3J5QmFyKHRydWUpO1xyXG4gICAgICAgIH1cclxuICAgICAgICBpZiAod2luZG93LlN0YXR1c0Jhcikge1xyXG4gICAgICAgICAgICAvLyBvcmcuYXBhY2hlLmNvcmRvdmEuc3RhdHVzYmFyIHJlcXVpcmVkXHJcbiAgICAgICAgICAgIC8vU3RhdHVzQmFyLnN0eWxlTGlnaHRDb250ZW50KCk7XHJcbiAgICAgICAgfVxyXG4gICAgfSk7XHJcbn1cclxuXHJcbm1vZHVsZS5leHBvcnRzID0gWyckaW9uaWNQbGF0Zm9ybScsIEFwcE1haW5dO1xyXG4iLCJtb2R1bGUuZXhwb3J0cyA9IGZ1bmN0aW9uICgkc3RhdGVQcm92aWRlciwgJHVybFJvdXRlclByb3ZpZGVyKSB7XHJcbiAgICAkc3RhdGVQcm92aWRlclxyXG5cclxuICAgICAgICAvL2Fic3RyYWN0c1xyXG4gICAgICAgIC5zdGF0ZSgndGFic0NvbnRyb2xsZXInLCB7XHJcbiAgICAgICAgICAgIHVybDogJy9tYWluJyxcclxuICAgICAgICAgICAgdGVtcGxhdGVVcmw6ICd2aWV3cy9zaGFyZWQvdGFic0NvbnRyb2xsZXIvdGFic0NvbnRyb2xsZXIuaHRtbCcsXHJcbiAgICAgICAgICAgIGFic3RyYWN0OiB0cnVlXHJcbiAgICAgICAgfSlcclxuXHJcbiAgICAgICAgLy9sb2dpblxyXG5cclxuICAgICAgICAuc3RhdGUoJ2xvZ2luJywge1xyXG4gICAgICAgICAgICB1cmw6ICcvbG9naW4nLFxyXG4gICAgICAgICAgICB0ZW1wbGF0ZVVybDogJ3ZpZXdzL2NvbXBvbmVudHMvbG9naW4vbG9naW5WaWV3Lmh0bWwnXHJcbiAgICAgICAgfSlcclxuXHJcbiAgICAgICAgLnN0YXRlKCdzaWdudXAnLCB7XHJcbiAgICAgICAgICAgIHVybDogJy9zaWdudXAnLFxyXG4gICAgICAgICAgICB0ZW1wbGF0ZVVybDogJ3ZpZXdzL2NvbXBvbmVudHMvbG9naW4vc2lnbnVwVmlldy5odG1sJ1xyXG4gICAgICAgIH0pXHJcblxyXG4gICAgICAgIC8vc2VydmljZXNcclxuXHJcbiAgICAgICAgLnN0YXRlKCd0YWJzQ29udHJvbGxlci5zY2hlZHVsZVRyYWluZXInLCB7XHJcbiAgICAgICAgICAgIHVybDogJy9zbG90cy90cmFpbmVyTmFtZScsXHJcbiAgICAgICAgICAgIHZpZXdzOiB7XHJcbiAgICAgICAgICAgICAgICAnc2VydmljZXMnOiB7XHJcbiAgICAgICAgICAgICAgICAgICAgdGVtcGxhdGVVcmw6ICd2aWV3cy9jb21wb25lbnRzL3NjaGVkdWxlVHJhaW5lci9zY2hlZHVsZVZpZXcuaHRtbCcsXHJcbiAgICAgICAgICAgICAgICAgICAgY29udHJvbGxlcjogJ3NjaGVkdWxlQ3RybCdcclxuICAgICAgICAgICAgICAgIH1cclxuICAgICAgICAgICAgfVxyXG4gICAgICAgIH0pXHJcblxyXG4gICAgICAgIC5zdGF0ZSgndGFic0NvbnRyb2xsZXIuc2VydmljZXMnLCB7XHJcbiAgICAgICAgICAgIHVybDogJy9zZXJ2aWNlcycsXHJcbiAgICAgICAgICAgIHZpZXdzOiB7XHJcbiAgICAgICAgICAgICAgICAnc2VydmljZXMnOiB7XHJcbiAgICAgICAgICAgICAgICAgICAgdGVtcGxhdGVVcmw6ICd2aWV3cy9jb21wb25lbnRzL3NlcnZpY2VzL3NlcnZpY2VzVmlldy5odG1sJyxcclxuICAgICAgICAgICAgICAgIH1cclxuICAgICAgICAgICAgfVxyXG4gICAgICAgIH0pXHJcblxyXG4gICAgICAgIC8vc3RyZWFtXHJcblxyXG4gICAgICAgIC5zdGF0ZSgndGFic0NvbnRyb2xsZXIuc3RyZWFtJywge1xyXG4gICAgICAgICAgICB1cmw6ICcvc3RyZWFtJyxcclxuICAgICAgICAgICAgdmlld3M6IHtcclxuICAgICAgICAgICAgICAgICdzdHJlYW0nOiB7XHJcbiAgICAgICAgICAgICAgICAgICAgdGVtcGxhdGVVcmw6ICd2aWV3cy9jb21wb25lbnRzL3N0cmVhbS9zdHJlYW1WaWV3Lmh0bWwnXHJcbiAgICAgICAgICAgICAgICB9XHJcbiAgICAgICAgICAgIH1cclxuICAgICAgICB9KVxyXG5cclxuICAgICAgICAuc3RhdGUoJ3RhYnNDb250cm9sbGVyLm5ld1Bvc3QnLCB7XHJcbiAgICAgICAgICAgIHVybDogJy9uZXdQb3N0JyxcclxuICAgICAgICAgICAgdmlld3M6IHtcclxuICAgICAgICAgICAgICAgICdzdHJlYW0nOiB7XHJcbiAgICAgICAgICAgICAgICAgICAgdGVtcGxhdGVVcmw6ICd2aWV3cy9jb21wb25lbnRzL3N0cmVhbS9uZXdQb3N0Vmlldy5odG1sJ1xyXG4gICAgICAgICAgICAgICAgfVxyXG4gICAgICAgICAgICB9XHJcbiAgICAgICAgfSlcclxuICAgICAgICAuc3RhdGUoJ3RhYnNDb250cm9sbGVyLmFkZENvbnRhY3RzJywge1xyXG4gICAgICAgICAgICB1cmw6ICcvYWRkQ29udGFjdHMnLFxyXG4gICAgICAgICAgICB2aWV3czoge1xyXG4gICAgICAgICAgICAgICAgJ3N0cmVhbSc6IHtcclxuICAgICAgICAgICAgICAgICAgICB0ZW1wbGF0ZVVybDogJ3ZpZXdzL2NvbXBvbmVudHMvc3RyZWFtL2FkZENvbnRhY3RzVmlldy5odG1sJ1xyXG4gICAgICAgICAgICAgICAgfVxyXG4gICAgICAgICAgICB9XHJcbiAgICAgICAgfSlcclxuXHJcbiAgICAgICAgLy9ldmVudHNcclxuXHJcbiAgICAgICAgLnN0YXRlKCd0YWJzQ29udHJvbGxlci5teUV2ZW50cycsIHtcclxuICAgICAgICAgICAgdXJsOiAnL215LWV2ZW50cycsXHJcbiAgICAgICAgICAgIHZpZXdzOiB7XHJcbiAgICAgICAgICAgICAgICAnZXZlbnRzJzoge1xyXG4gICAgICAgICAgICAgICAgICAgIHRlbXBsYXRlVXJsOiAndmlld3MvY29tcG9uZW50cy9teUV2ZW50cy9ldmVudHNWaWV3Lmh0bWwnXHJcbiAgICAgICAgICAgICAgICB9XHJcbiAgICAgICAgICAgIH1cclxuICAgICAgICB9KVxyXG5cclxuICAgICAgICAvL2FjY291bnRcclxuXHJcbiAgICAgICAgLnN0YXRlKCd0YWJzQ29udHJvbGxlci5hY2NvdW50Jywge1xyXG4gICAgICAgICAgICB1cmw6ICcvYWNjb3VudCcsXHJcbiAgICAgICAgICAgIHZpZXdzOiB7XHJcbiAgICAgICAgICAgICAgICAnYWNjb3VudCc6IHtcclxuICAgICAgICAgICAgICAgICAgICB0ZW1wbGF0ZVVybDogJ3ZpZXdzL2NvbXBvbmVudHMvYWNjb3VudC9hY2NvdW50Vmlldy5odG1sJ1xyXG4gICAgICAgICAgICAgICAgfVxyXG4gICAgICAgICAgICB9XHJcbiAgICAgICAgfSk7XHJcblxyXG5cclxuICAgICR1cmxSb3V0ZXJQcm92aWRlci5vdGhlcndpc2UoJy9sb2dpbicpXHJcbn07XHJcbiIsIid1c2Ugc3RyaWN0JztcclxuXHJcbm1vZHVsZS5leHBvcnRzID0gYW5ndWxhci5tb2R1bGUoJ3NjaGVkdWxlJywgW10pXHJcbiAgICAuY29udHJvbGxlcignc2NoZWR1bGVDdHJsJywgcmVxdWlyZSgnLi9zY2hlZHVsZUN0cmwnKSlcclxuIiwiJ3VzZSBzdHJpY3QnO1xyXG5cclxuZnVuY3Rpb24gc2NoZWR1bGVUcmFpbmVyQ3RybCgkc2NvcGUsICRpb25pY1BvcHVwKSB7XHJcblxyXG4gICAgJHNjb3BlLnNob3dQb3B1cCA9IGZ1bmN0aW9uKCkge1xyXG4gICAgICAgICRzY29wZS5kYXRhID0ge307XHJcblxyXG4gICAgICAgIC8vIEEgY29uZmlybSBkaWFsb2dcclxuICAgICAgICAkc2NvcGUuc2hvd0NvbmZpcm0gPSBmdW5jdGlvbigpIHtcclxuICAgICAgICAgICAgdmFyIGNvbmZpcm1Qb3B1cCA9ICRpb25pY1BvcHVwLmNvbmZpcm0oe1xyXG4gICAgICAgICAgICAgICAgdGl0bGU6ICdDb25maXJtIGFwcG9pbnRtZW50JyxcclxuICAgICAgICAgICAgICAgIHRlbXBsYXRlOiAnPHAgY2xhc3M9XCJ0ZXh0LWNlbnRlclwiPkNyZWF0ZSBhcHBvaW50bWVudCB3aXRoIDxzdHJvbmc+QXJ0ZW0gRGF2aWRjaGVua288L3N0cm9uZz4gb24gPHN0cm9uZz5Nb25kYXksIDI1IEFwciAyMDE2IGZyb20gMTA6MDAgdGlsbCAxMTowMDwvc3Ryb25nPj88L3A+J1xyXG4gICAgICAgICAgICB9KTtcclxuXHJcbiAgICAgICAgICAgIGNvbmZpcm1Qb3B1cC50aGVuKGZ1bmN0aW9uKHJlcykge1xyXG4gICAgICAgICAgICAgICAgaWYocmVzKSB7XHJcbiAgICAgICAgICAgICAgICAgICAgY29uc29sZS5sb2coJ1lvdSBhcmUgc3VyZScpO1xyXG4gICAgICAgICAgICAgICAgfSBlbHNlIHtcclxuICAgICAgICAgICAgICAgICAgICBjb25zb2xlLmxvZygnWW91IGFyZSBub3Qgc3VyZScpO1xyXG4gICAgICAgICAgICAgICAgfVxyXG4gICAgICAgICAgICB9KTtcclxuICAgICAgICB9XHJcbiAgICB9KCk7XHJcbn1cclxuXHJcbm1vZHVsZS5leHBvcnRzID0gWyckc2NvcGUnLCAnJGlvbmljUG9wdXAnLCBzY2hlZHVsZVRyYWluZXJDdHJsXTsiXX0=

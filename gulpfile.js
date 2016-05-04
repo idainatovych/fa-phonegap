@@ -60,8 +60,8 @@ gulp.task('vendor_js', function(done) {
 });
 
 gulp.task('js', function(done) {
-    var bundleStream = browserify('app/app.js').bundle()
-    bundleStream
+    return browserify('app/app.js', {debug: true})
+        .bundle()
         .pipe(source('dist.js'))
         .pipe(gulp.dest('temp/js/'));
 });
@@ -76,7 +76,7 @@ gulp.task('compile_dist', ['vendor_js', 'js'], function() {
 gulp.task('watch', ['default'], function() {
     gulp.watch('app/index.html', ['copy_index']);
     gulp.watch('app/**/*.html', ['copy']);
-    gulp.watch('app/**/*.js', ['js']);
+    gulp.watch('app/**/*.js', ['scripts']);
     gulp.watch('app/**/*.scss', ['sass', 'compile_css']);
 });
 
