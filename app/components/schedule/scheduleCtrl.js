@@ -1,7 +1,6 @@
 'use strict';
 
 function scheduleTrainerCtrl($scope, $ionicPopup) {
-
     $scope.showPopup = function() {
         $scope.data = {};
 

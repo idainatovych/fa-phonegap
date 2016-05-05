@@ -86,7 +86,8 @@ module.exports = function ($stateProvider, $urlRouterProvider) {
             url: '/account',
             views: {
                 'account': {
-                    templateUrl: 'views/components/account/accountView.html'
+                    templateUrl: 'views/components/account/accountView.html',
+                    controller: 'accountCtrl'
                 }
             }
         });
