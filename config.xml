@@ -10,6 +10,6 @@
     <content src="index.html" />
     <access origin="*" />
     <preference name="windows-target-version" value="10.0" />
-    <plugin name="cordova-plugin-local-notifications" />
+    <gap:plugin name="de.appplant.cordova.plugin.local-notification" />
 
 </widget>
