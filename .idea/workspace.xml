@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="541f4906-35b5-4f04-8e64-dd92e2fa9264" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.editorconfig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/app.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/app.main.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/app.router.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/components/account/_accountStyle.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/components/account/accountCtrl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/components/account/accountView.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/components/account/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/components/login/loginView.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/components/login/signupView.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/components/myEvents/eventsView.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/components/schedule/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/components/schedule/scheduleCtrl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/components/schedule/scheduleView.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/components/services/servicesView.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/components/stream/addContactsView.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/components/stream/newPostView.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/components/stream/streamView.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/components/translate/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/components/translate/translate.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/main.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/shared/tabsController/tabsController.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpfile.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hooks/after_prepare/010_add_platform_class.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/android/icon/drawable-hdpi-icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/android/icon/drawable-ldpi-icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/android/icon/drawable-mdpi-icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/android/icon/drawable-xhdpi-icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/android/icon/drawable-xxhdpi-icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/android/icon/drawable-xxxhdpi-icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/android/splash/drawable-land-hdpi-screen.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/android/splash/drawable-land-ldpi-screen.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/android/splash/drawable-land-mdpi-screen.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/android/splash/drawable-land-xhdpi-screen.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/android/splash/drawable-land-xxhdpi-screen.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/android/splash/drawable-land-xxxhdpi-screen.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/android/splash/drawable-port-hdpi-screen.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/android/splash/drawable-port-ldpi-screen.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/android/splash/drawable-port-mdpi-screen.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/android/splash/drawable-port-xhdpi-screen.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/android/splash/drawable-port-xxhdpi-screen.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/android/splash/drawable-port-xxxhdpi-screen.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/ios/icon/icon-40.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/ios/icon/icon-40@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/ios/icon/icon-50.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/ios/icon/icon-50@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/ios/icon/icon-60.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/ios/icon/icon-60@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/ios/icon/icon-60@3x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/ios/icon/icon-72.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/ios/icon/icon-72@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/ios/icon/icon-76.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/ios/icon/icon-76@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/ios/icon/icon-small.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/ios/icon/icon-small@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/ios/icon/icon-small@3x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/ios/icon/icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/ios/icon/icon@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/ios/splash/Default-568h@2x~iphone.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/ios/splash/Default-667h.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/ios/splash/Default-736h.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/ios/splash/Default-Landscape-736h.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/ios/splash/Default-Landscape@2x~ipad.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/ios/splash/Default-Landscape~ipad.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/ios/splash/Default-Portrait@2x~ipad.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/ios/splash/Default-Portrait~ipad.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/ios/splash/Default@2x~iphone.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/ios/splash/Default~iphone.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/splash.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scss/ionic.app.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/css/app.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/css/fonts/ionicons.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/css/fonts/ionicons.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/css/fonts/ionicons.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/css/fonts/ionicons.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/js/app.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/views/components/account/accountView.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/views/components/login/loginView.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/views/components/login/signupView.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/views/components/myEvents/eventsView.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/views/components/schedule/scheduleView.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/views/components/scheduleTrainer/scheduleView.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/views/components/services/servicesView.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/views/components/stream/addContactsView.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/views/components/stream/newPostView.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/views/components/stream/streamView.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/views/shared/tabsController/tabsController.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.xml" afterPath="$PROJECT_DIR$/config.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hooks/README.md" afterPath="$PROJECT_DIR$/hooks/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic.project" afterPath="$PROJECT_DIR$/ionic.project" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/index.html" afterPath="$PROJECT_DIR$/www/index.html" />
+    </list>
+    <ignored path="fitness-addict.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="fitness-addict" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.9230769">
+              <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
+              <folding>
+                <marker date="1462887970319" expanded="true" signature="16412:16418" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.33693695">
+              <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/app/components/account/accountCtrl.js" />
+        <option value="$PROJECT_DIR$/app/main.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/app/assets/styles/ionic.app.scss" />
+        <option value="$PROJECT_DIR$/temp/js/vendor.js" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/app/components/account/accountStyle.scss" />
+        <option value="$PROJECT_DIR$/app/main.scss" />
+        <option value="$PROJECT_DIR$/app/components/account/_accountStyle.scss" />
+        <option value="$PROJECT_DIR$/bower.json" />
+        <option value="$PROJECT_DIR$/app/123.html" />
+        <option value="$PROJECT_DIR$/app/components/translate/app.translate.js" />
+        <option value="$PROJECT_DIR$/app/components/router/app.routes.js" />
+        <option value="$PROJECT_DIR$/app/components/router/routes.js" />
+        <option value="$PROJECT_DIR$/app/app.run.js" />
+        <option value="$PROJECT_DIR$/app/app.translate.js" />
+        <option value="$PROJECT_DIR$/www/js/app.js" />
+        <option value="$PROJECT_DIR$/temp/css/dist.css" />
+        <option value="$PROJECT_DIR$/temp/css/main.css" />
+        <option value="$PROJECT_DIR$/plugins/cordova-plugin-battery-status/plugin.xml" />
+        <option value="$PROJECT_DIR$/www/css/app.min.css" />
+        <option value="$PROJECT_DIR$/scss/ionic.app.scss" />
+        <option value="$PROJECT_DIR$/temp/js/dist.js" />
+        <option value="$PROJECT_DIR$/app/index.html" />
+        <option value="$PROJECT_DIR$/www/views/components/login/loginView.html" />
+        <option value="$PROJECT_DIR$/gulpfile.js" />
+        <option value="$PROJECT_DIR$/app/app.controllers.js" />
+        <option value="$PROJECT_DIR$/app/components/scheduleTrainer/scheduleCtrl.js" />
+        <option value="$PROJECT_DIR$/app/components/router/index.js" />
+        <option value="$PROJECT_DIR$/app/app-main.js" />
+        <option value="$PROJECT_DIR$/app/router.js" />
+        <option value="$PROJECT_DIR$/app/components/schedule/schedule.js" />
+        <option value="$PROJECT_DIR$/app/components/myEvents/eventsView.html" />
+        <option value="$PROJECT_DIR$/app/shared/tabsController/tabsController.html" />
+        <option value="$PROJECT_DIR$/old2_config.xml" />
+        <option value="$PROJECT_DIR$/old___config.xml" />
+        <option value="$PROJECT_DIR$/www/old2_config.xml" />
+        <option value="$PROJECT_DIR$/www/config.xml" />
+        <option value="$PROJECT_DIR$/www/io_config.xml" />
+        <option value="$PROJECT_DIR$/app/app.main.js" />
+        <option value="$PROJECT_DIR$/app/components/translate/index.js" />
+        <option value="$PROJECT_DIR$/app/components/login/loginView.html" />
+        <option value="$PROJECT_DIR$/app/components/account/index.js" />
+        <option value="$PROJECT_DIR$/app/components/schedule/scheduleCtrl.js" />
+        <option value="$PROJECT_DIR$/app/app.router.js" />
+        <option value="$PROJECT_DIR$/app/app.js" />
+        <option value="$PROJECT_DIR$/app/components/account/accountView.html" />
+        <option value="$PROJECT_DIR$/app/components/account/accountCtrl.js" />
+        <option value="$PROJECT_DIR$/app/components/translate/translate.js" />
+        <option value="$PROJECT_DIR$/www/index.html" />
+        <option value="$PROJECT_DIR$/config.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsBuildToolPackageJson" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="PhpServers">
+    <servers />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fitness-addict" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fitness-addict" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fitness-addict" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="293" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="293" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="293" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="967" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="293" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="292" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="293" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="968" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Work\Projects\fitness-addict\www\js" />
+      <recent name="D:\Work\Projects\fitness-addict\www\css" />
+      <recent name="D:\Work\Projects\fitness-addict\app" />
+      <recent name="D:\Work\Projects\fitness-addict" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Work\Projects\fitness-addict\app\components" />
+      <recent name="D:\Work\Projects\fitness-addict" />
+      <recent name="D:\Work\Projects\fitness-addict\www" />
+      <recent name="D:\Work\Projects\fitness-addict\app" />
+      <recent name="D:\Work\Projects\fitness-addict\app\components\router" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="MongoRunConfiguration" factoryName="Mongo">
+      <setting name="path" value="" />
+      <setting name="shellParams" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-options />
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui>bdd</ui>
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="541f4906-35b5-4f04-8e64-dd92e2fa9264" name="Default" comment="" />
+      <created>1460030381450</created>
+      <option name="number" value="Default" />
+      <updated>1460030381450</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26705757" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32792208" sideWeight="0.50319827" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.8137255" sideWeight="0.4978678" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3409091" sideWeight="0.4968017" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32683983" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32792208" sideWeight="0.50319827" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.8137255" sideWeight="0.4978678" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3251634" sideWeight="0.4968017" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20801815" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32713348" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1462887970319" expanded="true" signature="16412:16418" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1462887970319" expanded="true" signature="16412:16418" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1462887970319" expanded="true" signature="16412:16418" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../vitrina-core/frontend/assets/scripts/functions/initRadio.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23327616">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3063063">
+          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.9230769">
+          <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
+          <folding>
+            <marker date="1462887970319" expanded="true" signature="16412:16418" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33693695">
+          <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

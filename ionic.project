@@ -1,12 +1,4 @@
 {
-  "name": "ServiceToday",
-  "app_id": "",
-  "gulpStartupTasks": [
-    "sass",
-    "watch"
-  ],
-  "watchPatterns": [
-    "www/**/*",
-    "!www/lib/**/*"
-  ]
+  "name": "cordova-plugin-local-notifications",
+  "app_id": ""
 }
