@@ -45,7 +45,7 @@ var app = {
             },
             "ios": {
                 "sound": true,
-                "vibration": true,
+                "alert": true,
                 "badge": true,
                 "categories": {
                     "invite": {
