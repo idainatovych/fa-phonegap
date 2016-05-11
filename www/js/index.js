@@ -41,11 +41,11 @@ var app = {
         console.log('calling push init');
         var push = PushNotification.init({
             "android": {
-                "senderID": "739143097358"
+                "senderID": "XXXXXXXX"
             },
             "ios": {
                 "sound": true,
-                "alert": true,
+                "vibration": true,
                 "badge": true,
                 "categories": {
                     "invite": {
@@ -72,6 +72,34 @@ var app = {
             "windows": {}
         });
         console.log('after init');
+
+        app.accept = function(data) {
+            // do something with the notification data
+
+            push.finish(function() {
+                console.log(data);
+            }, function() {
+                console.log('accept callback failed');
+            }, data.additionalData.notId);
+        };
+        app.reject = function(data) {
+            // do something with the notification data
+
+            push.finish(function() {
+                console.log('reject callback finished');
+            }, function() {
+                console.log('accept callback failed');
+            }, data.additionalData.notId);
+        };
+        app.maybe = function(data) {
+            // do something with the notification data
+
+            push.finish(function() {
+                console.log('maybe callback finished');
+            }, function() {
+                console.log('accept callback failed');
+            }, data.additionalData.notId);
+        };
 
         push.on('registration', function(data) {
             console.log('registration event: ' + data.registrationId);
