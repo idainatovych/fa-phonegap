@@ -14,6 +14,14 @@
     "cordova:template",
     "phonegap:template"
   ],
+  "cordovaPlugins": [
+    {
+      "variables": {
+        "SENDER_ID": "739143097358"
+      },
+      "locator": "phonegap-plugin-push"
+    }
+  ],
   "bugs": {
     "url": "https://github.com/phonegap/phonegap-template-push/issues"
   },
