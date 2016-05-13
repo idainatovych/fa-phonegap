@@ -1,4 +1,49 @@
-module.exports = function ($stateProvider, $urlRouterProvider) {
+module.exports = function ($stateProvider, $urlRouterProvider, RestangularProvider) {
+
+    // The URL of the API endpoint
+    RestangularProvider.setBaseUrl('http://fa.shade.europe.apibest.com/app_dev.php/api/v1/');
+
+    // JSON-LD @id support
+    RestangularProvider.setRestangularFields({
+        id: '@id'
+    });
+
+    RestangularProvider.setSelfLinkAbsoluteUrl(false);
+
+    // Hydra collections support
+    RestangularProvider.addResponseInterceptor(function (data, operation) {
+        // Remove trailing slash to make Restangular working
+        function populateHref(data) {
+            if (data['@id']) {
+                data.href = data['@id'].substring(1);
+            }
+        }
+
+        // Populate href property for the collection
+        populateHref(data);
+
+        if ('getList' === operation) {
+            var collectionResponse = data['hydra:member'];
+            collectionResponse.metadata = {};
+
+            // Put metadata in a property of the collection
+            angular.forEach(data, function (value, key) {
+                if ('hydra:member' !== key) {
+                    collectionResponse.metadata[key] = value;
+                }
+            });
+
+            // Populate href property for all elements of the collection
+            angular.forEach(collectionResponse, function (value) {
+                populateHref(value);
+            });
+
+            return collectionResponse;
+        }
+
+        return data;
+    });
+
     $stateProvider
 
         //abstracts
@@ -17,7 +62,8 @@ module.exports = function ($stateProvider, $urlRouterProvider) {
 
         .state('signup', {
             url: '/signup',
-            templateUrl: 'views/components/login/signupView.html'
+            templateUrl: 'views/components/signUp/signupView.html',
+            controller: 'signUpCtrl as vm'
         })
 
         //services
@@ -87,7 +133,7 @@ module.exports = function ($stateProvider, $urlRouterProvider) {
             views: {
                 'account': {
                     templateUrl: 'views/components/account/accountView.html',
-                    controller: 'accountCtrl'
+                    controller: 'accountCtrl as vm'
                 }
             }
         });
