@@ -19,12 +19,10 @@ function currentUser(Restangular) {
 
     currentUser.prototype.modifyUser = function () {
 
-        //Здесь будет отправка измений пользователя на сервер
+        this.user.plainPassword = 'password';
 
-        //Restangular.one('users', 32).customPUT()
-        //
-        //
-        //this.user.put()
+        Restangular.one('users', 32).customPUT(this.user);
+
 
     };
 
