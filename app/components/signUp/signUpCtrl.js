@@ -1,6 +1,6 @@
 'use strict';
 
-function getUsersCtrl(addUserService) {
+function getUsersCtrl(addUser) {
 
     var vm = this;
 
@@ -12,9 +12,9 @@ function getUsersCtrl(addUserService) {
     };
 
     vm.signUp = function () {
-        addUserService.post(vm.signUpInfo);
+        addUser.post(vm.signUpInfo);
     };
 
 }
 
-module.exports = ['addUserService', getUsersCtrl];
+module.exports = ['addUser', getUsersCtrl];

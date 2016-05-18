@@ -1,6 +1,6 @@
 'use strict';
 
-function addUser(Restangular) {
+function addUser(Restangular, currentUser) {
 
     var addUserService = function () {
     };
@@ -9,10 +9,12 @@ function addUser(Restangular) {
 
         var users = Restangular.all('users');
 
-        users.post(user);
+        users.post(user).then(function(res){
+            currentUser.setId(res['@id'].replace(/\/app_dev.php\/api\/v1\/users\//gi, ''));
+        });
     };
 
     return new addUserService()
 }
 
-module.exports = ['Restangular', addUser];
+module.exports = ['Restangular', 'currentUser', addUser];

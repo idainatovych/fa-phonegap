@@ -1,28 +1,39 @@
 'use strict';
 
-function currentUser(Restangular) {
+function currentUser(Restangular, $window, currentUserId) {
 
 
     var currentUser = function () {
 
-        this.fetchUser();
+        if (currentUserId){
+            this.fetchUser();
+        }
+
+    };
+
+    currentUser.prototype.setId = function(id){
+
+        if(!currentUserId){
+            $window.localStorage.setItem('id', id.toString() );
+            currentUserId = $window.localStorage.getItem('id');
+            this.fetchUser();
+        }
 
     };
 
     currentUser.prototype.fetchUser = function () {
 
-        this.data = Restangular.one('users', 32)
-
-        this.user = this.data.get().$object;
+        this.user = Restangular.one('users', currentUserId).get().$object;
 
     };
 
     currentUser.prototype.modifyUser = function () {
 
         this.user.plainPassword = 'password';
-
-        Restangular.one('users', 32).customPUT(this.user);
-
+        if(!this.user.information){
+            delete this.user.information;
+        }
+        Restangular.one('users', currentUserId).customPUT(this.user);
 
     };
 
@@ -35,4 +46,4 @@ function currentUser(Restangular) {
     return new currentUser()
 }
 
-module.exports = ['Restangular', currentUser];
+module.exports = ['Restangular', '$window', 'currentUserId', currentUser];

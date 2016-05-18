@@ -57,7 +57,8 @@ module.exports = function ($stateProvider, $urlRouterProvider, RestangularProvid
 
         .state('login', {
             url: '/login',
-            templateUrl: 'views/components/login/loginView.html'
+            templateUrl: 'views/components/login/loginView.html',
+            controller: 'loginCtrl as vm'
         })
 
         .state('signup', {
