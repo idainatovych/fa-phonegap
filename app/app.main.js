@@ -11,6 +11,7 @@ function AppMain($ionicPlatform, $translate) {
                 });
             }, null);
         }
+        // Uncomment when we get logic for push notification
         //
         //var push = PushNotification.init({
         //    "android": {

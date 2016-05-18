@@ -17,14 +17,13 @@ function accountCtrl($scope, $translate, currentUser) {
         $scope.lang = 'ru';
     };
 
-
-    vm.submit = function () {
+    vm.submit = function (key) {
 
         currentUser.modifyUser();
 
-        //if (key) {
-        //    $translate.use(key);
-        //}
+        if (key) {
+            $translate.use(key);
+        }
     };
 
 
